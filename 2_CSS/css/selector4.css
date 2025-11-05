@@ -1,0 +1,61 @@
+/* 일반 구조 선택자 */
+/* :first-child
+    형제관계의 요소 중 첫번째 요소
+*/
+
+#test1 > p:first-child{
+    /*
+    해석 순서 중요
+    -id가 test1인 태그 중 형제관계요소 중 첫번째인 아이가 p태그인가?
+    */
+    background-color: blueviolet;
+    color: white;
+}
+
+/*
+형제관계 요소 중 마지막 요소
+
+*/
+#test1 > p:last-child{
+    background-color: orangered
+ }/* 적용 안 됨(해석 순서로 인하여*/
+
+/*
+:nth-child(수열)
+형제관계 요소 중 지정된 수열ㅇ번째 요소를 모두 선택
+-순서 따질 때 1부터 시작
+*/
+
+#test1 >p:nth-child (2){
+    background-color: gold;
+
+}
+
+/*홀수번째 형제 요소 선택*/
+#test1 > p:nth-child(2n-1){
+font-weight: bold;
+font-size : 32px;
+
+}
+
+#test1 > p:nth-child(2n){
+font-style: oblique;
+
+}
+
+#test1 > p:nth-last-child(2){
+    background-color: hotpink;
+}
+
+
+
+/*부정 선택자*/
+
+/*
+#test3 요소의 자식 li 요소 중 3의 배수를 제외한 요소만 선택
+*/
+
+#test3 > li:not(:nth-of-type(3n)){
+
+    background-color: aqua;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_표연습</title>
+
+    <style>
+        .te1 {
+            border : 2px solid black;
+            border-collapse : collapse;
+            text-align :center ;
+        }
+
+        .te1 thead {
+            background-color: aqua;
+        }
+        
+        .te2 {
+            background-color: pink;
+        }
+
+        .te3 {
+            background-color: yellow ;
+        }
+
+        .te5{
+            background-color: orange;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table border="2" class="te1">
+
+        <thead>
+        <tr>
+            <th colspan="5">조미현 컬렉션</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th rowspan="5" class="te2">제품리스트</th>
+            <th class="te2">코드</th>
+            <th class="te2">분류</th>
+            <th class="te2">가격</th>
+            <th class="te2">구매가능개수</th>
+        </tr>
+
+        <tr>
+            <td class="te3">01-468</td>
+            <td class="te3">봄</td>
+            <td class="te3">200,000원</td>
+            <td class="te3">1068</td>
+        </tr>
+
+        <tr>
+            <td class="te3">01-223</td>
+            <td class="te3">여름</td>
+            <td class="te3">200,000원</td>
+            <td class="te3">976</td>
+        </tr>
+
+        <tr>
+            <td class="te3">01-223</td>
+            <td class="te3">가을</td>
+            <td class="te3">200,000원</td>
+            <td class="te3">1205</td>
+        </tr>
+
+        <tr>
+            <td class="te3">01-245</td>
+            <td class="te3">겨울</td>
+            <td class="te3">200,000원</td>
+            <td class="te3">537</td>
+        </tr>
+
+        <tr><tfoot>
+            <th colspan ="3" class="te2">종합</th>
+            <td class="te3">800,000원</td>
+            <td class="te3">3786</td>
+            </tfoot>
+        </tr>
+
+    </table>    
+
+    <hr>
+
+    <table border="2px" class="te5">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">5</td>
+            <td rowspan="2">6</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td colspan="2">8</td>
+        </tr>
+
+
+
+
+
+    </table>
+    
+
+    
+    
+    
+</body>
+</html>

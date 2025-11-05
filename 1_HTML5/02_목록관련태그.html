@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_목록관련태그</title>
+</head>
+<>
+    
+<h1>목록 관련 태그</h1>
+<p>
+    <b>ul(Unordered List)</b> 태그 : 순서가 없는 목록
+    <br>
+    <b>ol(Ordered List) 태그</b> : 순서가 있는 목록
+    <br>
+     > 부모태그. 둘 모두 독자적으로 사용할 수 없다. 아래의 자식태그 필요
+     <br>   
+     <br>
+
+    <b>li(List item)</b> 태그 : ul, ol 태가의 내부에 작성되는 태그로 목록의 요소 표시
+</p>
+
+<h3>ul 태그</h3>
+
+<ul> 
+    test1 : ul 단독 사용<br>
+    목록 1 <br>
+    목록 2 <br>
+    > 목록으로 인식 안됨
+</ul>
+
+<ul> 
+    test2 : ul 과 li 같이 사용<br>
+    <li>김밥</li>
+    <li>커피</li>
+    > 목록으로 인식 됨
+</ul>
+
+<hr>
+
+<ol>
+    test3 : ol 과 li 사용
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="1">
+    test3-1 : ol 타입지정 - type ="1"(기본값)
+     <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="a">
+    test3-2 : ol 타입지정 - type ="a"
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="A">
+    test3-3 : ol 타입지정 - type ="A"
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="I">
+    test3-4 : ol 타입지정 - type ="I"
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="i">
+    test3-5 : ol 타입지정 - type ="i"
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+start 속성 : 시작 번호 지정<br>
+reversed 속성 : 순서 반대로 지정(속성만 써도 됨)<br>
+
+<ol type ="1" start="5">
+    test3-6 : ol 시작순서 지정 1
+    <li>김밥</li>
+    <li>커피</li>
+</ol>
+
+<ol type ="i" start="6" reversed>
+    test3-6 : ol 시작순서 지정 2
+    <li>김밥</li>
+    <li>커피</li>
+    <li>순대</li>
+    <li>스무디</li>
+</ol>
+
+<hr>
+<p>
+    <ul><!-- 순서 없는 목록 --> 
+<li>대분류1</li>
+<li>대분류2
+    <ol>
+        <li>소분류1</li><!-- 순서 있는 목록 -->
+        <li>소분류2</li>
+        <ul>
+            <li>세분류1</li>
+            <li>세분류2</li>
+            <li>세분류3</li>
+        </ul>
+        <li>소분류3</li>
+    </ol>
+</li>
+<li>대분류3</li>
+    </ul>
+</p>
+
+
+
+
+</body>
+</html>

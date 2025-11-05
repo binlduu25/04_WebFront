@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_이미지관련태그</title>
+</head>
+<body>
+
+<h1>img 태그</h1>
+<pre>
+- 웹 문서에 사진, 그림 같은 이미지를 삽입하는 용도의 태그
+
+[속성]
+1) src : 삽입할 이미지의 경로를 지정하는 속성(파일경로, 웹주소)
+2) width / height : 이미지의 크기를 지정하는 속성
+3) alt : 이미지를 설명하는 속성 -> 이미지가 출력되지 않는 경우 화면에 직접표시
+</pre>
+
+<hr>
+
+<h3>src 속성 확인</h3>
+<!--
+상대경로 : 현재위치 기준으로 지정
+ .. : 상위폴더
+ /  : 아래, 하위, 안쪽
+ ./ : 동일레벨
+
+절대경로 : 웹사이트 루트폴더(/) 기준으로 경로 지정
+-->
+
+<img src="../images/images/cats/cat1.jpg" width = 300px height = 200px>
+<br>
+<img src="https://images.unsplash.com/photo-1761835473942-a28e61d18cc8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1964" width = 300px height = 500px>
+
+<h3>크기 관련</h3>
+<h4>고정크기단위(px)</h4>
+<h4>가변크기단위(%)</h4>
+<img src="../images/images/dogs/dog3.jpg" width = 65%>
+
+<h3>alt 속성 확인</h3>
+<img src="../images/images/해리포터11.webp" alt="해리포터">
+
+
+</body>
+</html>

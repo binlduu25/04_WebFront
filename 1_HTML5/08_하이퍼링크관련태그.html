@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_하이퍼링크관련태그</title>
+</head>
+<body>
+
+<h1>하이퍼링크 관련 태그 a</h1>
+<h3>a(anchor)</h3>
+    
+<pre>
+    현재 html 문서와 다른 html 문서를 연결해서
+    페이지 이동을 할 수 있게 하는 기능 제공
+    a 태그로 감싸진 문자열 = 하이퍼링크
+</pre>
+
+<h2>a 태그 이용한 하이퍼링크 구현</h2>
+<ul>
+    <li>
+        <a href="01_글자관련태그.html">01_글자관련태그</a>
+    </li>
+    <li>
+        <a href="02_목록관련태그.html" target ="_blank">02_목록관련태그</a>
+        <!-- 
+        target 속성 : 연결된 문서를 어디에서 열지 지정하는 속성
+        기본값 : 같은 페이지(_self)
+        _blank : 새 탭
+        -->
+    </li>
+    <li>
+        <a href="https://www.naver.com">네이버</a>
+    </li>
+</ul>
+
+<h2>이미지 클릭 시 페이지 이동</h2>
+<a href="https://www.naver.com">
+    <img src="../images/images/해리포터2.webp" width = 300px height = 450px>
+</a>
+
+<h2>한 페이지 내에서 이동</h2>
+
+<ul id="list">목록
+    <li><a href="#cat1">고양이1</a></li>
+    <li><a href="#cat2">고양이2</a></li>
+    <li><a href="#cat3">고양이3</a></li>
+</ul>
+
+<h3 id="cat1">고양이 1</h3>
+<img src="../images/images/cats/cat3.jpg">
+<h3 id="cat2">고양이 2</h3>
+<img src="../images/images/cats/cat4.jpg">
+<h3 id="cat3">고양이 3</h3>
+<img src="../images/images/cats/cat5.jpg">
+
+<br>
+<a href="#list">목록으로 이동</a>
+
+
+</body>
+</html>

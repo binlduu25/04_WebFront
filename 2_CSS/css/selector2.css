@@ -1,0 +1,90 @@
+/*
+이 파일 전체가 <style>태그 내부라고 생각하면 됨
+*/
+
+/*기본 속성 선택자*/
+div[name="name-1"]{
+    background-color: aquamarine;
+}
+
+p[test="test"]{color:blue;}
+
+[name="name-2"]{
+    background-color: burlywood;
+}
+
+/*자식선택자*/
+#parent-ul > li{
+    background-color: orange;
+}
+
+#parent-ul > li >span{ /* '>' span은 한단계 밑의 자식이기 때문에 자식태그를 한번 거친다*/
+    background-color: red;
+
+
+}
+    /*후손 선택자 : 띄어쓰기*/
+#parent-ul span{
+        color:White;
+    font-weight:bold;    }
+
+#test-div p{
+    background-color: aqua;
+}
+
+/* 반응 선택자 */
+.div-cls{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+
+    margin-bottom: 30px;
+    margin-left: 30px;
+    /*margin-방향 : 해당 방향으로 px만큼 여백 지정*/
+
+    cursor: pointer; /*요소 위 마우스 올릴 시 손가락 모양으로 변경*/
+}
+
+#active-test:active {
+background-color: brown;
+
+}
+
+#hover-test:hover{
+background-color:blueviolet;
+width:210px;
+height:210px;
+transition-duration:0.5s; 
+
+}
+
+/*상태 선택자*/
+#focus-test:focus{
+    background-color: red;
+}
+
+input[name="fruits"]:checked{
+    
+    width:30px;
+    height:30px;
+    /*radio, checkbox는 크기를 제외한 스타일이 적용되지 않는다(색상 등)*/
+
+}
+
+#test-div2 > input:enabled{
+/*id가 test-div2의 자식 input 태그 중 상태가 enabled인 애들 선택*/
+background-color: lightgreen;
+}
+#test-div2 > input:disabled{
+background-color: lightcoral;
+}
+
+/*동위 선택자*/
+#div1 + div{
+    background-color: olive;
+}
+
+#div3 ~ div{
+    background-color: aquamarine;
+}
