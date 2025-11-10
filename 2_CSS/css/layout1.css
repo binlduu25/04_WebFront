@@ -1,0 +1,94 @@
+.area1{background-color: yellow;}
+.area2{background-color: rgb(130, 83, 207);}
+.area3{background-color: rgb(43, 128, 40);}
+.area4{background-color: rgb(224, 106, 77);}
+.area5{background-color: rgb(126, 34, 34);}
+
+
+.inline{
+    display:inline;
+}
+
+.block{
+    display:block;
+
+    width:150px;
+    height:150px;
+}
+.inline-block{
+display:inline-block;}
+
+/*-------------------------------------------------------------*/
+
+#container-1{/*부모 영역은 고정크기값을 주는 게 보통임*/
+    border:3px solid black;
+    width: 323px;
+    height: 472px;
+}
+
+    #container-1 > div{
+        border: 1px dashed hotpink;
+        height:50%;
+    }
+
+    #container-1 > div:first-of-type{
+        height:30%;
+        background-color: rgb(83, 144, 223) ;
+    }
+
+    #container-1 > div:last-of-type{
+        height:70%;
+        background-color: skyblue ;
+    }
+
+/*-------------------------------------------------------------*/
+
+/*block 형식 요소는 별도 width가 지정되지 않으면 부모의 100%를 차지한다*/
+#container-2{
+    border: 2px solid black;
+    width:300px;
+    height:440px;
+}
+    #container-2 > .div-2:nth-of-type(1){
+        height:20%;
+        background-color: aquamarine;
+    }
+    #container-2 > .div-2:nth-of-type(2){
+        height:30%;
+        background-color: azure;
+    }
+    #container-2 > .div-2:nth-of-type(2){
+        height:50%;
+        background-color: cornflowerblue;
+    }
+
+    /*-------------------------------------------------------------*/
+
+#container-3{
+    border:5px solid red;
+    width:500px;
+    height:200px;   
+}
+    .div-3:first-of-type{
+        width:50%;
+        height:100%;
+        display: inline-block;
+        background-color: darkorange;
+    }
+        .div-3:last-of-type{
+        width:50%;
+        height:100%;
+        display: inline-block;
+        background-color: rgb(44, 32, 17);
+    }
+
+/*-------------------------------------------------------------*/
+.div-4{
+    border:3px solid black;
+    height:100px;
+}
+#test4{
+    background-color: deeppink;
+    /*display:none;*/
+    visibility: hidden;
+}

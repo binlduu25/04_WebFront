@@ -149,10 +149,102 @@ hidden : 화면상에는 보이지 않지만 값은 존재함
 form 태그 안에서 사용하면 서버로 value에 있는 값이 제출됨.
 -->
 
+<hr>
+<hr>
+<hr>
 
+<h1>form 태그</h1>
 
+<pre>
+-div와 같은 영역(block)
+내부에 작성된 input 태그 값을 서버로 전달 역할
 
+[속성]
+1) action : 내부에 작성된 값을 전달할 서버 또는 페이지 주소 작성        
+            미작성 시 기본값으로 현재 페이지의 url 사용
 
+2) name : form 태그의 이름을 지정하여 form 태그 구분 (js 사용)
+
+3) method(방식) : 서버로 데이터를 전달하는 방식을 지정하는 속성
+                - get / post 방식 지정 가능(기본값 get)
+
+4) target : action에 지정된 주소를 현재탭/새탭 어디서 열지 지정
+</pre>
+
+<h3>form 예시1</h3>
+
+<form>
+    아이디 : <input type="text" name="userId"> <br> <!-- name 속성값 반드시 있어야-->
+    비밀번호 : <input type="password" name="userPass"><br>
+
+    <input type="hidden" value:hello>
+    
+    <button> 제출</button>
+</form>
+<!--
+    - 주소?userId=cmhinst&userPw=asd123
+    -> ? : 제출된 값을 나타내는 문자열의 시작부분
+    -> userId, userPw : input 태그에 작성해둔 name 속성값(서버에 제출할 데이터 중 KEY)
+
+    cmhinst, asd123 :
+    -> input 창에 직접 입력한 값(value값 / 서버에 제출할 데이터 중 VALUE)
+
+    ?K=V&K=V
+    주소?userId=cmhinst&userPw=asd123 :
+    ->  name 속성값이 'userId'인 input 태그에 작성된 값 'cmhinst'와
+        name 속성값이 'userPw'인 input 태그에 작성된 값 'asd123'이
+        GET 방식으로 서버에 제출되었다.
+-->
+
+<!--
+button 태그
+: 클릭 가능한 버튼 생성
+->  폼 제출, JS 와 연결된 기능 수행 역할
+
+type : 
+1.submit(기본값) : 폼 태그 내부 작성 시 클릭 되면 input 내 작성값 모두 서버로 제출하는 역할
+2.reset : 입력창 내 작성값 모두 초기화
+3.button : 그냥 버튼(+ JS 연결하여 사용)
+-->
+
+<hr>
+
+<h3>form 예시2</h3>
+<!-- 
+type 이 checkbox, radio 인 경우
+    value 속성값 없을 시 > on 값으로 제출
+    value 속성값 있을 시 > value 라는 속성값으로 제출
+-->
+
+<form action="./07_이미지관련태그.html" target="_blank" method="get">
+    <input type="checkbox" name="hobby" value="야구"> 야구
+    <input type="checkbox" name="hobby"> 농구
+    <input type="checkbox"> 축구
+
+    <button type="submit">제출</button>
+    <!--
+    value값 없이 야구만 제출 시 : ?hobby=on
+    value값 설정 후 : ?hobby=야구
+    축구는 name 속성 없기 때문에 제출 x
+    -->
+</form>
+
+<hr>
+<hr>
+<hr>
+
+<form>
+    <input>
+    <button type="reset">초기화</button>
+</form>
+
+<button type="button" it="btn">그냥 버튼</button>
+
+<script> // script 는 자바스크립트 영역
+document.getElementById("btn").addEventListener("click", function(){
+    alert("버튼 클릭됨");
+});
+</script>
 
 
 </body>

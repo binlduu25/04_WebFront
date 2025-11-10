@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_CLONECODING</title>
+    <link href="../2_CSS/css/clonecoding.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c1c5b38c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <section id="header-linemenu">
+            <a href="#"><button id="menubar" class="fa-solid fa-bars"></button></a>
+        </section>
+        <section id="header-logo">
+            <a href="#"><img src="../images/images/youtubelogo.png" id="logoimg"></a>
+        </section>
+        <section></section> <!-- header section 3번째: empty -->
+        <form>
+            <fieldset>
+                <section id="header-searchbar">
+                    <input type="text" placeholder="검색">
+                    <button type="button" class="fa-solid fa-keyboard"></button>
+                </section>
+                <section id="header-searchbar-icon">
+                    <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+                </section>
+            </fieldset>
+        </form>
+        <section id="header-searchvoice">
+            <button class="fa-solid fa-microphone"></button>
+        </section>
+        <section></section> <!-- header section 5번째: empty -->
+        <section id="header-upload">
+            <div>
+                <button class="fa-solid fa-plus">&nbsp;만들기</button>
+            </div>
+        </section>
+        <section id="header-notifyingbell">
+            <button class="fa-solid fa-bell"></button>
+        </section>
+        <section id="header-profileicon">
+            <img src="../images/images/cats/cat4.jpg">
+        </section>
+    </header>
+    <main>
+        <section id="emptysec1"></section><!-- 빈 섹션 1-->
+        <section class="container-now-playing">
+            <section id="main-playing">
+                <iframe src="https://www.youtube.com/embed/iicfmXFALM8?si=eywENxsKKSMGt-oC" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <section></section> <!-- 화면 hover 시 메뉴-->
+            </section>
+            <section id="info-main-playing">
+                <section id="name-main-playing">Chill Drive - Aesthetic Music ~ Lofi hip hop mix</section>
+                <section id="below-menu">
+                    <a href="#" id="channelicon"><img src="../images/images/simpson.png"></a>
+                    <div id="chname-follower">
+                        <div>chill music</div>
+                        <div>구독자 32.1만명</div>
+                    </div>
+                    <button id="subscribe">구독</button>
+                    <div></div> <!-- 빈 div-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <section id="detail-info"></section>
+            </section>
+            <section id="reply"></section>
+        </section>
+        <section class="container-next-playing">
+            <section></section>
+            <section id="playlist-menu"></section>
+            <section id="playlist">
+
+                <ul>
+
+                    <li>
+                        <div>
+                            <img src="">
+                            <div>영상길이</div>
+                        </div>
+                        <div>
+                            <h6>큰 제목</h6>
+                            <h6>채널명</h6>
+                            <h6>조회수.업로드일</h6>
+                        </div>
+                        <div>
+                            <button class="fa-solid fa-ellipsis-vertical"></button>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+            </section>
+        </section>
+        <section id="emptysec4"></section><!-- 빈 섹션 4-->
+    </main>
+
+</body>
+
+</html>

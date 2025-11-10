@@ -1,0 +1,106 @@
+/*color 속성*/
+#color-ul > li{
+    font-size:24px;
+    font-weight: bold;
+}
+
+    #color-ul > li:nth-child(1){
+        color:red;
+    }
+    #color-ul > li:nth-child(2){
+        color:#b028b4;
+    }
+    #color-ul > li:nth-child(3){
+        color:rgb(40, 180, 180)
+    }
+    #color-ul > li:nth-child(4){ /*0 -> 1 : 투명 -> 불투명*/
+        background-color: black;
+        color:rgb(238, 234, 5, 1);
+    }
+    #color-ul > li:nth-child(5){
+        color:hsl(118, 64%, 43%);
+    }
+    #color-ul > li:nth-child(6){ /*0 -> 1 : 투명 -> 불투명*/
+        background-color: black;
+        color:hsl(187, 64%, 43%, 0.5);
+    }
+
+#deco-ul > li{
+    font-size: 24px;
+}
+    #deco-ul > li:nth-child(1){
+        text-decoration: underline;
+    }
+    #deco-ul > li:nth-child(3){
+        text-decoration: line-through;
+    }
+    #deco-ul > li:nth-child(5){
+        text-decoration: overline;
+    }
+    #deco-ul > li:nth-child(7) > a{
+        text-decoration: none;
+    }
+
+#align-test{
+    width:550px;
+    border:2px solid black;
+}
+    #align-test > p:nth-child(1){
+        text-align:left;
+    }
+    #align-test > p:nth-child(2){
+        text-align:center;
+    }
+    #align-test > p:nth-child(3){
+        text-align:right;
+    }
+    #aligh-test > p:nth-child(4){
+        text-align:justify; /* 양쪽 정렬 */
+    }
+    
+#line-test > p:last-child{
+    line-height:300%;
+    /* line-height:50px;*/
+}
+
+#center-test{
+    width:200px;
+    height: 200px;
+    border: 1px solid black;
+    text-align: center;
+}
+    #center-test > span{
+        line-height: 200px;
+    }
+
+#letter-test{
+    letter-spacing: 10px;
+}
+
+#shadow-test{
+    width : 500px;
+    height: 800px;
+    background-color: black;
+    text-align:center;
+}
+    #shadow-test > p:nth-child(1){
+        font-size: 100px;
+        color:white;
+        text-shadow: 5px 5px 5px #bbb;
+        /*오른쪽 5px 아래쪽 5px 5px 흐림효과*/
+    }
+    #shadow-test > p:nth-child(2){
+        font-size: 100px;
+        color:rgb(255, 255, 255. 0.8);
+        text-shadow: 0px 0px 10px #70b8c5;
+        /*오른쪽 5px 아래쪽 5px 5px 흐림효과*/
+    }
+
+    #shadow-test > p:nth-child(4) {
+                font-size: 100px;
+        text-shadow: 0px 0px 4px #ccc,
+                    0px -5px 4px #ff3,
+                    2px -10px 6px #fd3,
+                    -2px -15px 11px #f80,
+                    2px -20px 18px #f20;
+}

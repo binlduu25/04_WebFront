@@ -1,0 +1,407 @@
+div{
+  border : 1px solid black;
+  box-sizing: border-box;
+  /* content + padding + border 합으로 width/height 지정 */
+}
+
+.item{
+  width: 75px;
+  height: 75px;
+}
+
+.item1{background-color: red;}
+.item2{background-color: orangered;}
+.item3{background-color: orange;}
+.item4{background-color: yellow;}
+.item5{background-color: yellowgreen;}
+.item6{background-color: green;}
+.item7{background-color: lightblue;}
+.item8{background-color: blue;}
+.item9{background-color: violet;}
+
+
+.flex-container{ /*부모 요소*/
+    height:800px;
+    display: flex;
+    /*
+    display: flex;
+    item(자식 태그)을 감싸는 요소(부모 태그)의 형식을
+    flexbox로 변경함(반드시 부모 요소에 속성 부여)
+    ->  내부 요소인 item들이 자동정렬되며 레이아웃을 쉽게 조정할 수 있는 환경이 조성됨
+    ->  가로/세로 정렬 쉽게 조정 가능(자동 정렬)
+    ->  요소 간 간격 자동 조정(공간 배분)
+    ->  반응형 레이아웃(화면 크기 따른 유연 조정)
+    */
+
+    /* 1.부모 전용 속성
+    flex-direction
+    - 메인 축의 방향과 시작 위치 지정하는 속성 
+
+        flex-direction: row;
+        : 가로(행방향)기본값
+        
+        flex-direction: row-reverse; 
+        : 가로(역방향)
+        
+        flex-direction: column;
+        : 세로(열방향), 메인축 세로 방향으로 바뀜(교차축은 가로로)
+        
+        flex-direction: column-reverse;
+        : 세로(역방향)
+        */
+
+    /* 2.
+    flex-wrap
+    -내부 item들을 포장하는 속성. item들이 강제로 한줄로 배치되게 할지
+    한줄을 벗어나 여러줄로 배치할 것인지 지정
+    
+        flex-wrap: nowrap;
+        - item 한줄로 배치(기본값)
+
+        flex-wrap: wrap;
+        - item 여러줄로 배치
+
+        flex-wrap:wrap-reverse;
+        - item 여러줄 배치 + 순서 반대
+    */
+
+    /* 3.
+    justify-content: flex-start;
+    메인축 방향으로 앞에서부터 정렬(기본값)
+
+    justify-content: flex-end;
+    메인축 방향으로 뒤에 붙어서 정렬
+
+    justify-content: center;
+    가운데정렬
+    
+    justify-content: space-between;
+    양 끝 아이템 벽에 붙이고 나머ㅣ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    */
+    
+/*
+교차축 앞에서부터 정렬(기본값)
+align items : flex:start;
+
+    가운데 정렬: align-items: center;
+    교차축 끝에 붙어 정렬 aligh-items:flex-end;
+
+
+*/
+
+}
+
+
+
+#con{/*부모*/
+    width:450px;
+    height:450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#item-center{
+    width:80px;
+    height:80px;
+    background-color: red;
+}
+
+
+
+/*
+item(자식)에게 주는  flex 속성
+*/
+
+/*
+-flex-basis : item의 기본 크기 결정 속성
+-부모를 기준으로 자식이 얼마만큼 점유할 것인가
+-width 와 비슷, flex-grow, flex-shirink 에 의해 유동적으로 변경될 수 있음
+    -flex-basis : auto;(기본값) > 요소 본래의 크기만큼 점유
+    -flex-basis : 0; > 본래 요소 크기 중 content만 남겨두고 점유 영역 없음
+*/
+
+.basis-20{flex-basis : 20%;}
+.basis-30{flex-basis : 30%;}
+.basis-50{flex-basis : 50%;}
+
+/*
+flex-grow
+
+*/
+.grow1{
+    flex-grow:0;
+    /*0(기본값) 요소가 추가적인 가용공간을 차지하지 않음
+    자신의 초기 크기만 유지
+    설정값은 여백의 비율로 작성하고 적용됨*/
+}
+
+.grow2{
+    flex-grow:2;
+}
+
+/*
+flex-shirink : 1; (기본값)
+container 의 크기가 줄어들면 다른 요소들(자식요소)과 함께 비율적으로
+축소될 수 있음을 의미
+*/
+.shrink1{
+    flex-shrink: 0;
+    /* 
+    0 : 줄어들지 않음
+    컨테이너 공간 부족해도 본인 원래 크기 유지
+    */
+}
+
+.shrink2{
+    flex-shrink: 1;
+}
+
+.shrink3{
+    flex-shrink: 2;
+    /*
+    flex-shirnk : n 일 때,
+    n의 비율대로 줄어든다(찌그러진다)
+    */
+}
+
+/*
+flex:
+> flexbox 내에서 아이템의 크기와 비율 설정
+*/
+    .flex-test1{flex:1;}
+    /* 
+    flex: 1;
+    -> 위 3가지 한꺼번에 적용. 즉,
+        남은 가용 공간 1 비율(100%)로 차지 : flex-grow: 1;
+        컨테이너 크기 부족 시 줄어들면 1로 축소 : flex-shrink: 1;
+        본인 요소의 content만큼만 차지 : flex-basis:0;
+    */
+
+    .flex-test2{flex : 1 0 auto;}
+    /*
+    위의 경우는
+    flex-grow : 1;
+    flex-shrink : 0; (줄어들지 않음)
+    flex-basis: auto; (본인 요소 원래 크기)
+    */
+
+    .flex-test3{flex: 1 50%;}
+    /*
+    위의 경우는
+    flex-grow : 1;
+    flex-shrink : 1; 
+    flex-basis: 50%; (본인 요소의 50%)
+    */
+
+
+
+/* 
+order 기본값 : 0 
+양수, 음수 모두 설정 가능
+크기순으로 배치됨
+*/
+.order:nth-of-type(1){order:3;}
+.order:nth-of-type(3){order:-2;}
+.order:nth-of-type(3){order: 5;}
+
+
+
+/**********************************************************/
+/*문제1*/
+
+.container-1{
+    width:800px; 
+    height:500px; 
+    
+    display:flex;
+    flex-direction : column;}
+
+    .header-1, .footer-1{
+        flex-basis : 20%;
+        background-color: lightgray;
+    }
+    .body-1{/*container-1 의 자식이면서 body-item 의 부모이기에 flex 선언 가능*/
+        display : flex;
+        flex-basis : 60%;
+    }
+        .body-item:nth-child(1){
+            flex-basis: 30%;
+            background-color: tomato;
+        }
+        .body-item:nth-child(2){
+            flex-basis: 50%;
+            background-color: rgb(146, 75, 63);
+        }
+        .body-item:nth-child(3){
+            flex-basis: 20%;
+            background-color: rgb(209, 167, 160);
+        }
+
+/*문제2*/
+.container-2{
+    width:800px;
+    height:500px;
+
+    display:flex;
+    flex-direction:column;
+}
+    .body-2:nth-of-type(1){
+        flex-basis:25%;
+        background-color: brown;
+    }   
+    .body-2:nth-of-type(2){
+        flex-basis:75%;
+        display: flex;
+        background-color: darkorange;
+    }
+        .body-2-1:nth-of-type(1){
+            flex-basis: 30%;
+        }
+        .body-2-1:nth-of-type(2){
+            flex-basis: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+            .body-2-1-1:nth-of-type(1){
+                flex-basis:85%;
+                background-color: greenyellow;
+            }
+            .body-2-1-1:nth-of-type(2){
+                flex-basis:15%;
+                background-color: lightcoral;
+            }
+
+/*문제3*/
+.container-3{
+    width:800px;
+    height:500px;
+
+    display: flex;
+    flex-direction: column;
+}
+    .body-3:nth-of-type(1){
+        flex-basis:30%;
+        background-color: yellow;
+    }
+    .body-3:nth-of-type(2){
+        flex-basis: 70%;
+        display:flex;
+    }
+        .body-3-1:nth-of-type(1){
+            flex-basis:30%;
+            background-color: skyblue;
+        }
+        .body-3-1:nth-of-type(2){
+            flex-basis:70%;
+            display:flex;
+            flex-wrap:wrap;
+        }
+            .body-3-2:nth-of-type(1){
+                flex-basis:70%;
+                background-color: cyan;
+            }
+            .body-3-2:nth-of-type(2){
+                flex-basis:30%;
+                background-color: red;
+            }
+            .body-3-2:nth-of-type(3){
+                flex-basis:100%;
+                background-color: blueviolet;
+            }
+            
+
+/*문제4*/
+
+.container-4{
+    width:800px;
+    height:500px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+}
+    .head-4{
+        flex-basis:20%;
+    }
+    .body-4{
+        flex-basis:60%;
+        display: flex;
+    }
+        .body-left{
+            flex-basis:30%;
+            background-color: yellow;
+        }
+        .body-right{
+            flex-basis:70%;
+            background-color: orange;
+            display: flex;
+            align-items:flex-end;
+            justify-content: space-between;
+        }
+            .arm{
+                width:30%;
+                height:50%;
+                background-color: red;
+            }
+    .foot-4{
+        flex-basis:20%;
+    }
+
+/*문제5*/
+
+.container-5{
+    width: 800px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+}
+    .head-5{
+        flex-basis:35%;
+        display: flex;
+        background-color: yellow;
+        flex-wrap:wrap;
+    }
+        .eye-5:nth-of-type(1){
+            flex-basis:20%;
+        }
+        .eye-5:nth-of-type(2){
+            flex-basis:40%;
+        }
+        .eye-5:nth-of-type(3){
+            flex-basis:40%;
+        }
+    .body-5{
+        flex-basis:65%;
+        display: flex;
+    }
+        .left-5{
+            flex-basis:40%;
+            display: flex;
+        }
+            .left-5-left{
+                flex-basis:70%;
+                display: flex;
+                flex-direction: column;
+                background-color: skyblue;
+                justify-content: space-evenly;
+            }
+                .left-5-left-arm{
+                    flex-basis:calc(100%/3);
+                }
+            .left-5-right{
+                flex-basis:30%;
+                background-color: pink;
+            }
+        .right-5{
+            flex-basis:60%;
+            display:flex;
+        }
+            .right-5-right{
+                
+            }
+
+
+
+
+
