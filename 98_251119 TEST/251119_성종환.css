@@ -1,0 +1,26 @@
+*{box-sizing:border-box;}
+
+#container{
+    width:40%;
+}
+
+#input-area{
+    flex-basis:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:none;
+}
+
+    #input-area > span{
+        margin-top:20px;
+        margin-bottom:20px; 
+    }
+
+#print-area{
+    flex-basis:60%;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+
+}

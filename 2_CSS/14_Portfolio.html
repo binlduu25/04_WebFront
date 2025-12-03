@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_Portfolio</title>
+    <link href="../2_CSS/css/portfolio.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c1c5b38c5.js" crossorigin="anonymous"></script>
+    
+
+
+</head>
+<body>
+    <section id="container">
+
+        <header>
+                <nav id="nav-container">  <!-- nav  -->
+                    <ul>
+                        <li>
+                            <a href="#main1" id="icon1">
+                                <i class="fa-solid fa-address-card"></i>
+                                <div id="hid-aboutme">About me</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#main2" id="icon2">
+                                <i class="fa-solid fa-code"></i>
+                                <div id="hid-eduskill">Education & Skills</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#main3" id="icon3">
+                                <i class="fa-solid fa-file"></i>
+                                <div id="hid-portfo">Portfolio</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#main4" id="icon4">
+                                <i class="fa-solid fa-mobile"></i>
+                                <div id="hid-contactme">Contact me</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="icon5">
+                                <i class="fa-brands fa-instagram"></i>
+                                <div id="hid-instagram">Instagram</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section id="emptysec"></section> <!--빈 섹션-->
+
+                <section id="header-name">
+                    <h3>PROGRAMMER PORTFOLIO</h3>
+                    <h4>SEONG JONG HWAN</h4>
+                </section> <!-- 제목 -->
+
+
+
+
+        </header>
+        
+        <main>
+            <section id="sec-aboutme">
+                <h2 id="main1">About me</h2>
+                <div>
+                    <div id="aboutme-img-div"> <!-- 사진 이미지 -->
+                        <img src="../images/images/mong.jpg" alt="mong">
+                    </div> 
+                    <div></div><!--empty div-->
+                    <div id="aboutme-main-div"> <!-- about me 본문-->
+                        <div>
+                            <h3>이름</h3>
+                            <h5>성종환</h5>
+                            <h3>생년월일</h3>
+                            <h5>1991.06.06.</h5>
+                            <h3>취미</h3>
+                            <h5>독서, 운동, 게임</h5>
+                        </div>
+                        <div>
+                            <h3>연락처</h3>
+                            <h5>010-9158-5776</h5>
+                            <h3>장단점</h3>
+                            <h5>....</h5>
+                            <h3>개발자로서의 목표</h3>
+                            <h5>....</h5>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+
+            <section id="sec-edu-skill">
+                <h2 id="main2">Education & Skills</h2>
+                <div>
+
+                    <div id="edu"> <!-- edu 관련 본문-->
+                        <h4>Education</h4>
+                        <ul> 
+                            <li>- 성도고등학교 졸업(2010)</li>
+                            <li>- 동국대학교 경영정보학과 졸업(2017)</li>
+                            <li>- 한국출판인의회 출판편집자 실무과정 수료(2018)</li>
+                            <li>- KH정보교육원 개발자 과정 수료(2026)</li>
+                        </ul>
+                    </div> 
+                    <!-- <div id="career">career
+                        <h4>Career</h4>
+                        </div> 
+                    -->
+                    <div id="skills"> <!-- skills 표 들어갈 곳-->
+                        <h4>Skills</h4>
+                        <table>
+                            <tr>
+                                <thead>
+                                    <th>BackEnd</th>
+                                    <th>FrontEnd</th>
+                                    <th>DB</th>
+                                    <th>Server</th>
+                                    <th>Collaborations</th>
+                                </thead>
+                            </tr>
+                            <tr>
+                                <tbody>
+                                    <td>Java</td>
+                                    <td>HTML5, CSS5, JavaScript</td>
+                                    <td>Oracle</td>
+                                    <td>JDBC</td>
+                                    <td>Git</td>
+                                </tbody>
+                            </tr>
+                        </table>
+                    </div> 
+
+                </div>
+            </section>
+
+            <section id="sec-portfo">
+                <h2 id="main3">Portfolio</h2>
+                <div>
+                    <!--<a></a>-->
+                    <img src="../images/images/port1.png" alt="당장은 포트폴리오가 없기에">
+                    <img src="../images/images/port2.png" alt="스크린샷으로">
+                    <img src="../images/images/port3.png" alt="대체합니다..">
+                </div>
+            </section>
+
+            <section id="sec-contactme">
+                <h2 id="main4">Contact me</h2>
+                <div>
+                    <form action="" method="get" id="form">
+                        성명 : <input type="text" name="name" >
+                        <br>
+                        이메일 : <input type="email" name="email">
+                        <br>
+                        연락처 : <input type="tel" name="phone">
+                        <br>
+                        <button type="submit">CONTACT ME!</button>
+
+                    </form>
+                </div>
+            </section>    
+
+        </main>
+    
+    </section>
+    
+</body>
+</html>

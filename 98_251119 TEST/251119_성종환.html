@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>251119_성종환</title>
+    <link href="../98_251119 TEST/251119_성종환.css" rel="stylesheet">
+</head>
+<body>
+    
+    <section id="container">
+        <fieldset id="input-area">
+            <span>
+                너비 : <input type="number" id="width"> px
+                높이 : <input type="number" id="height"> px
+            </span>
+            <span>
+                글자크기 : <input type="number" id="font-size"> px
+                <label>
+                굵기 : 
+                    <input type="radio" name="font-weight" value="normal"> 보통
+                    <input type="radio" name="font-weight" value="bold"> 굵게
+                </label>
+            </span>
+            <span>
+                글자색 : <input type="text" id="font-color"> 
+                배경색 : <input type="text" id="background-color"> 
+            </span>
+            <span>
+                <label>가로정렬:
+                    왼쪽<input type="radio" name="align-row" value="left"> 
+                    가운데<input type="radio" name="align-row" value="center"> 
+                    오른쪽<input type="radio" name="align-row" value="right"> 
+                </label>
+            </span>
+            <span>
+                <label>세로정렬:
+                    위 <input type="radio" name="align-column" value="upper"> 
+                    가운데 <input type="radio" name="align-column" value="middle"> 
+                    아래 <input type="radio" name="align-column" value="lower"> 
+                </label>
+            </span>
+            <span>
+                출력문자열 : <input type="text" id="content">
+            </span>
+            <span>
+                <button id="set-btn">적용하기</button>
+            </span>
+        </fieldset>
+        <div id="print-area">
+        <p></p>
+        </div>
+    </section>
+
+
+
+    <script src="../98_251119 TEST/251119_성종환.js"></script>
+</body>
+</html>

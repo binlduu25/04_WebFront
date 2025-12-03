@@ -3,9 +3,7 @@
   height: 100px;
   background-color: lightblue;
 }
-/* width / height 속성은 
-기본적으로 content 영역의
-크기를 지정하는 속성
+/* width / height 속성은 기본적으로 content 영역의 크기를 지정하는 속성
 */
 
 .border {
@@ -24,9 +22,7 @@
   margin: 100px;
 }
 
-/* 서로 다른 요소의 margin 이 
-겹칠 경우 더 큰 margin을 가진
-요소의 값을 따른다. */
+/* 서로 다른 요소의 margin 이 겹칠 경우 더 큰 margin을 가진 요소의 값을 따른다. */
 
 
 /*

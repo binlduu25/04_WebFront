@@ -246,6 +246,308 @@ document.getElementById("btn").addEventListener("click", function(){
 });
 </script>
 
+<hr>
+
+<h3>fieldset / legend </h3>
+
+<pre>
+    fieldset: 테두리 만들어 그룹 구분하는 영역
+    legend : fieldset 테두리에 이름 붙임
+</pre>
+
+<form>
+    <fieldset>
+        <legend>로그인 폼</legend>
+
+        아이디 : <input> <br>
+        비밀번호 : <input type="password">
+
+        <button>로그인</button>
+    </fieldset>
+</form>
+
+<hr><hr><hr>
+
+<h3>textarea / select&option</h3>
+
+<h3>textarea 태그
+:여러줄을 입력하기 위한 입력상자</h3>
+<textarea></textarea>
+<textarea rows="5" cols="50" placeholder="dd" style="resize:none;"></textarea>
+rows: 가로
+cols :세로
+placeholder 속성 등 가능
+
+<hr> 
+<h3>select, option</h3>
+
+<form>
+    <select name="test">
+        <option value="1">선택1</option>
+        <option>선택2</option>
+        <option selected>selected 속성 주면 기본값</option>
+        <option disabled>옵션 비활성화 속성</option>
+        <button>submit</button>
+    </select>
+</form>
+<!-- 선택1 제출한다면 url : 주소?test=1 -->
+<!-- 선택2 제출한다면 url : 주소?test=선택2 -->
+<!-- 즉 value 속성값 있다면 value 속성값 제출, 없다면 option 사이 콘텐츠 값 제출 -->
+
+
+<input type="checkbox" checked>
+<input type="radio" checked>
+
+<!-- checked 속성은 checkbox 및 radio 에서 기본값으로 선택해놓음 -->
+
+<hr><hr><hr>
+<h1>연습문제</h1>
+
+ <form>
+    <label>고객명 :</label>
+    <input type="text" name="clientName"><br><br>
+
+    <label>전화번호 :</label>
+    <input type="tel" name="clientPhone"><br><br>
+
+    <label>E-mail :</label>
+    <input type="email" name="clientEmail"><br><br>
+
+
+    <label>피자선택 : </label>
+    <select name="pizza">
+        <option selected disabled >피자를 선택하세요</option>
+        <option value="cheese">치즈 피자</option>
+        <option value="pepperoni">페퍼로니 피자</option>
+        <option value="patato">포테이토 피자</option>
+        <option value="sweetp">고구마 피자</option>
+    </select>
+
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <label>
+            <input type="radio" name="size" value="small">
+            Small
+        </label><br><br>
+        <label>
+            <input type="radio" name="size" value="medium">
+            Medium
+        </label><br><br>
+        <label>
+            <input type="radio" name="size" value="large">
+            Large
+        </label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <label>
+            <input type="checkbox" name="topping" value="bacon">
+            베이컨
+        </label><br><br>
+        <label>
+            <input type="checkbox" name="topping" value="cheese">
+            치즈
+        </label><br><br>
+        <label>
+            <input type="checkbox" name="topping" value="onion">
+            양파
+        </label><br><br>
+        <label>
+            <input type="checkbox" name="topping" value="mushroom">
+            버섯
+        </label><br><br>
+    </fieldset>
+    <br>
+    희망배송시간 :
+    <input type="time"><br><br>
+
+    배송시 요청사항 : <textarea rows="3"></textarea><br><br>
+    
+    <button>주문하기</button>
+</form>
+
+<hr>
+
+<form>
+
+    <fieldset>
+      <legend>납품자 정보</legend>
+
+      <ol>
+        <li>
+          <label>납품자명 : </label>
+          <input type="text" name="name">
+          <br><br>
+        </li>
+        <li>
+          <label>email : </label>
+          <input type="email" name="email" placeholder="answer@naver.com">
+          <br><br>
+        </li>
+        <li>
+          <label>홈페이지 : </label>
+          <input type="url" name="homepage" value="http://">
+          <br><br>
+        </li>
+        <li>
+          <label>지역 : </label>
+          <select name="lo">
+            <option>부산</option>
+            <option>서울</option>
+            <option>경기</option>
+          </select>
+
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>납품 정보</legend>
+      <ul>
+        <li>
+          <label>상품명 :
+            <input type="text" name="productName">
+          </label>
+        </li>
+
+        <br>
+
+        <li>
+          <label>납품수량 :
+            <input type="number" placeholder="최소 100" min="100">
+          </label>
+        </li>
+
+        <br>
+
+        <li>
+          <label>납품등급 : <input type="range"></label>
+        </li>
+        <br>
+
+        <li>
+          <label>기타사항 :
+            <textarea name="etc" rows="5"></textarea>
+          </label>
+        </li>
+        <br>
+      </ul>
+    </fieldset>
+    <br>
+
+    <button>send message</button>
+
+  </form>
+
+  <hr>
+
+    <form>
+    <h1>회원 가입</h1>
+
+    <fieldset>
+      <legend>필수 입력 정보</legend>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <td>
+            <input type="text" placeholder="아이디 10글자 이내">
+          </td>
+          <td>
+            <button type="button">중복 확인</button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>비밀번호</th>
+          <td colspan="2">
+            <input type="password" size="30" placeholder="영문,숫자,특수문자 포함 8자 이상">
+          </td>
+        </tr>
+
+        <tr>
+          <th>비밀번호 확인</th>
+          <td colspan="2">
+            <input type="password" size="30">
+          </td>
+        </tr>
+
+        <tr>
+          <th>Email</th>
+          <td>
+            <input type="email">
+          </td>
+          <td>
+            <select>
+              <option>naver.com</option>
+              <option>daum.com</option>
+              <option>nate.com</option>
+              <option>gmail.com</option>
+              <option selected>직접입력</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>추가 정보</legend>
+
+      프로필 사진 <input type="file"><br><br>
+
+      성별 :
+      <label>
+        <input type="radio" value="man" name="gender" checked> 남자
+      </label>
+      <label>
+        <input type="radio" value="woman" name="gender"> 여자
+      </label>
+      <br><br>
+
+      생년월일 : <input type="date" name="dateIn"><br><br>
+
+      취미<br>
+      <label>
+        <input type="checkbox" name="hobby" value="baseball">
+        야구
+      </label>
+      &nbsp;
+      <label>
+        <input type="checkbox" name="hobby" value="basketball">
+        농구
+      </label>
+      &nbsp;
+      <label>
+        <input type="checkbox" name="hobby" value="football">
+        축구
+      </label><br>
+      <label>
+        <input type="checkbox" name="hobby" value="study" checked>
+        공부
+      </label>
+      &nbsp;
+      <label>
+        <input type="checkbox" name="hobby" value="music">
+        음악감상
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="hobby" value="etc">
+        기타
+      </label>
+      <input type="text" name="etcContent">
+
+      <br><br>
+      자기소개<br>
+      <textarea rows="10" cols="80" style="resize: none;"></textarea>
+    </fieldset>
+    <br>
+
+    <button type="submit">회원가입</button>
+    <button type="reset">다시입력</button>
+    <button type="button">이전으로</button>
+  </form>
 
 </body>
 </html>

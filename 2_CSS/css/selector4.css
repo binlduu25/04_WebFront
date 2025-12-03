@@ -61,7 +61,7 @@
 */
 
 #test1 > p:nth-last-child(2) {
-  color: hotpink;
+  color: hotpink; /*테스트5(p 중에 마지막)*/
 }
 
 

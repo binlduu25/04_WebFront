@@ -1,0 +1,41 @@
+body{
+    width:600px;
+    height:100%;
+    border: 1px solid black;
+}
+
+h1{
+    text-align: center;
+}
+
+#upper-row{
+    display: flex;
+    flex-direction: column;
+}
+#upper-row input{
+    width:80px;
+}
+#upper-row button{
+    width: 50px;
+    margin-left: 450px;
+}
+#lower-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#lower-row > textarea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border : 1px solid grey;
+    width: 550px;
+    height : 200px;
+}
+#print{
+    margin:30px;
+    width:500px;
+    height:300px;
+    border: 1px solid black;
+    background-color: rgb(241, 241, 241);
+}

@@ -1,0 +1,329 @@
+
+    @font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+    }
+    *{
+    font-family : 'Suit';
+    }
+
+
+body{
+    background-color: #222627;
+    color:#F6F6EE;
+    padding:0;
+    margin:0;
+}
+    #container{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header{
+        width:100%;
+        height:80px;
+        /*border-bottom: 1px solid #F6F6EE;*/
+        display: flex;
+        position:sticky;
+        top:0;
+        background-color: #181B1C;
+    }
+
+        #nav-container{
+            flex-basis:40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            #nav-container ul{
+                display:flex;
+                list-style: none;
+                margin:0px;
+            }
+                #nav-container li{
+                    width:120px;
+                    display:flex;
+                }
+                #nav-container a{
+                width:30px;
+                color:#F6F6EE;
+                text-decoration: none;
+                } 
+                #nav-container i{
+                    font-size:22px;
+                    display:inline-block;
+                }
+            #nav-container div{
+                margin-top:10px;
+                padding:0;
+                overflow:hidden;
+                max-width: 0;
+                position:absolute;
+                transition: max-width 0.2s ease-out;
+                font-size:14px;
+                color:#63CBC4;
+                white-space: nowrap;
+
+            }
+            #icon1:hover #hid-aboutme{
+                max-width:500px;
+            }
+            #icon1:hover i{
+                color:#63CBC4;
+                font-size:24px;
+                transition:0.2s;
+                transform:scale(1.2);
+            }
+            #icon2:hover #hid-eduskill{
+                max-width:500px;
+            }
+            #icon2:hover i{
+                color:#63CBC4;
+                font-size:24px;
+                transition:0.2s;
+                transform:scale(1.2);
+            }
+            #icon3:hover #hid-portfo{
+                max-width:500px;
+            }
+            #icon3:hover i{
+                color:#63CBC4;
+                font-size:24px;
+                transition:0.2s;
+                transform:scale(1.2);
+            }
+            #icon4:hover #hid-contactme{
+                max-width:500px;
+            }
+            #icon4:hover i{
+                color:#63CBC4;
+                font-size:24px;
+                transition:0.2s;
+                transform:scale(1.2);
+            }
+            #icon5:hover #hid-instagram{
+                max-width:500px;
+            }
+            #icon5:hover i{
+                color:#63CBC4;
+                font-size:24px;
+                transition:0.2s;
+                transform:scale(1.2);
+            }
+        #emptysec{
+            flex-basis:40%;
+        }
+    
+        #header-name{
+            flex-basis:20%;
+            margin:0px;
+            padding:0px;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: left;
+        }
+            #header-name > h3{
+                text-align:right;
+                margin:0px;
+                font-size:25px;
+                white-space: nowrap;
+                margin-right:20px;
+                color:#166A86;
+            }
+            #header-name > h4{
+                text-align:right;
+                margin:0px;
+                margin-top:5px;
+                font-size: 22px;
+                white-space: nowrap;
+                margin-right:20px;
+                color:#63CBC4;
+            }
+            
+    
+    #container > main{
+    width: 80%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    }
+        main > section{
+            height: 460px;
+            margin-top:70px;
+            padding:20px;
+            border-radius:20px;
+        }
+        
+        #sec-aboutme{
+            display:flex;
+            flex-direction: column;
+        }
+        #sec-aboutme:hover, 
+        #sec-edu-skill:hover, 
+        #sec-portfo:hover, 
+        #sec-contactme:hover{
+            border-color: #9bb8bb;
+            /*box-shadow: 0 0 5px #9bb8bb, 0 0 10px #9bb8bb, 0 0 20px #9bb8bb;*/
+            
+            transition: 0.5s;
+        }
+        #sec-aboutme:hover #main1, 
+        #sec-edu-skill:hover #main2, 
+        #sec-portfo:hover #main3, 
+        #sec-contactme:hover #main4{
+            color: rgb(238, 222, 81);
+            transition: 0.4s;
+        }
+            #main1, #main2, #main3, #main4{
+                font-size: 30px;
+                color:#63CBC4;
+            }
+            #sec-aboutme > div{
+                display: flex;
+            }
+                #aboutme-img-div{
+                    margin-top:25px;
+                    width:300px;
+                    height:300px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                    #aboutme-img-div img{
+                        height:350px;
+                        width:350px;
+                        object-fit:cover;
+                    }
+                #sec-aboutme > div > div:nth-child(2){
+                flex-basis:20%;
+                }
+                #aboutme-main-div{
+                    flex-basis: 60%;
+                    display:flex;
+                }
+                    #aboutme-main-div > div{
+                        flex-basis:45%;
+                    }
+                    #aboutme-main-div h3{
+                        color:#63CBC4;
+                        font-size:21px;
+                    }
+                    #aboutme-main-div h3{
+                        font-size:18px;
+                    }
+        #sec-edu-skills{
+            display: flex;
+            flex-direction: column;
+        }
+            #sec-edu-skill > div{
+                display: flex;
+            }
+                #edu{
+                    flex-basis:40%;
+                }
+                #skills{
+                    flex-basis:60%;
+                }
+                #sec-edu-skill h4{
+                    font-size: 25px;
+                }
+                #edu > h4{
+                    margin-left: 12px;
+                }
+                    #edu ul{
+                        list-style: none;
+                        padding:0;
+                        margin-left:20px;
+                    }
+                        #edu li{
+                            margin-top:12px;
+                            font-size:20px;
+                        }
+                    #skills table{
+                        font-size:20px;
+                        border: 1px solid #9bb8bb;
+                        border-collapse: collapse;
+                    }
+                    #skills th{
+                        width:150px;
+                        height:40px;
+                        border: 1px solid #9bb8bb;
+                    }
+                    #skills td{
+                        height:80px;
+                        text-align: center;
+                        border: 1px solid #9bb8bb;
+                    }
+
+                
+            #sec-portfo > div{
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0;
+            }
+                #sec-portfo img{
+                    margin-top: 30px;
+                    width:28%;
+                }
+
+        #sec-contactme{
+            height: 400px;
+            width: 80%;;
+            margin-top:100px;
+            margin-bottom: 150px;
+        }
+        #sec-contactme > div{
+        display: flex;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            font-size:20px;
+            margin-left: 30px;
+        }
+            #form > input{
+                width:200px;
+                height:30px;
+                font-size:20px;
+                outline:none;
+                color:#9bb8bb;
+                border:none;
+                background-color: transparent;
+                border-bottom: 1px solid #9bb8bb;
+            }
+            #form > input:hover{
+            background-color: #424347;
+            transition: 0.3s;
+            }
+            #form > button{
+                max-width: 180px;
+                height: 40px;
+                color:#F6F6EE;
+                font-size:24px;
+                outline:none;
+                border:none;
+                background-color: transparent;
+                cursor:pointer;
+            }
+            #form > button:hover{
+                color:#d3d39c;
+                transform: 0.3s;
+                font-weight: 900;
+            }
+
+
+
+
+
+
+
+
+
+
+
